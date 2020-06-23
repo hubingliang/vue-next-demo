@@ -21,10 +21,11 @@ export default {
     watchEffect(() => {
       // 依赖追踪
       console.log("count: ", count.value);
+      console.log("count: ", count);
     });
-    // watch(count, (count, prevCount) => {
-    //   console.log("count: ", count);
-    // });
+    watch(count, (count, prevCount) => {
+      console.log("count: ", count);
+    });
 
     return {
       count,
